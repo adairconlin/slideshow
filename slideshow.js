@@ -61,6 +61,11 @@ const moveNext = () => {
     }
 }
 
+//automates slideshow every 5 seconds
+const autoSlide = () => {
+    setInterval(function() {moveNext();}, 5000);
+}
+
 const nextBtn = () => {
     const next = document.getElementById("next-btn");
     next.addEventListener("click", function() {
@@ -97,5 +102,6 @@ const assignImgs = () => {
     assignImgs();
     prevBtn();
     nextBtn();
+    autoSlide();
 })();
 
